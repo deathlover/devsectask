@@ -17,7 +17,6 @@ type Job struct {
 	DataTransh []string
 	AssetID    []string
 
-	GlobalMap       map[string]map[string][]string
 	RecipientTransh map[string][]string
 	SenderTransh    map[string][]string
 	TranshID        map[string][]string
@@ -60,6 +59,5 @@ func NewJob() *Job {
 	j.RecipientTransh = make(map[string][]string)
 	j.SenderTransh = make(map[string][]string)
 	j.TranshID = make(map[string][]string)
-	j.GlobalMap = make(map[string]map[string][]string)
 	return &j
 }
