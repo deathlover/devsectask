@@ -35,6 +35,7 @@ func (c *Job) AttackAssetID(data string) {
 		defer wg.Done()
 		c.SimpleRunner(finalURL)
 	}()
+	wg.Wait()
 }
 
 func (c *Job) StupidAttacker() {
