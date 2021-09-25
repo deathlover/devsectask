@@ -19,7 +19,6 @@ func (c *Job) AttackTranshID(url string, data []string) {
 			defer wg.Done()
 			c.SimpleRunner(finalURL)
 		}()
-
 	}
 	wg.Wait()
 }
@@ -51,7 +50,6 @@ func (c *Job) StupidAttacker() {
 			for _, v := range c.Params {
 				finalURL += v + "=FAKE&"
 			}
-
 			c.SimpleRunner(finalURL)
 		}
 	}
@@ -88,7 +86,6 @@ func (c *Job) MindAttacker() {
 					finalURL += params[ix] + "=FAKE&"
 				}
 			}
-
 			c.SimpleRunner(finalURL)
 		}
 	}

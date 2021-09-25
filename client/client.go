@@ -70,7 +70,6 @@ func (c *Job) ExecTranshURL() {
 				if i+"/{id}" == transhurl {
 					c.AttackTranshID(i, v)
 				}
-
 			}
 		} else {
 			continue
@@ -102,9 +101,7 @@ func (c *Job) GetTranshLinks() {
 func (c *Job) GetList() {
 	var transh ParamResponse
 	re := regexp.MustCompile(`"\/transaction.*"`)
-
 	bodyreader := c.SimpleRunner(BaseListURL)
-
 	transactionlinks := re.FindAllString(string(bodyreader), -1)
 	c.DataTransh = transactionlinks
 
